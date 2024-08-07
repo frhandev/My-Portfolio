@@ -6,6 +6,19 @@ import { faBars, faX } from '@fortawesome/free-solid-svg-icons'
 const Navbar = () => {
     const [active, setActive] = useState(`navLinks`)
 
+    const [opacity, setOpacity] = useState(``)
+
+    window.addEventListener('scroll', handleScroll);
+
+    function handleScroll() {
+        if (window.scrollY != 0) {
+            setOpacity(`navActive`);
+        } else {
+            setOpacity(``)
+        }
+    }
+
+
     const handleClick = () => {
         if (active == "navLinks") {
             setActive(`navLinks` + ` ` + `active`);
@@ -16,7 +29,7 @@ const Navbar = () => {
 
     return (
         <header>
-            <nav>
+            <nav className={opacity}>
                 <a href=""><h1>Muhammed</h1></a>
 
                 <a onClick={handleClick} className='navToggler'><FontAwesomeIcon icon={faBars} /></a>
