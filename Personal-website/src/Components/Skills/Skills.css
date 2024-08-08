@@ -4,11 +4,6 @@
     align-items: center;
 }
 
-.skills h2 {
-    font-size: 3em;
-    margin: 2em;
-}
-
 .skillBar {
     display: flex;
     flex-direction: column;

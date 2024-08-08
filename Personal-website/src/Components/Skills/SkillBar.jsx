@@ -14,6 +14,7 @@ const SkillBar = ({ skillName, skillPerc, logo }) => {
             document.getElementById("Resume").scrollHeight - document.getElementById("Skills").scrollHeight;
         if (window.scrollY > skillsScrollY) {
             setPerci(skillPerc);
+            window.removeEventListener('scroll', handleScroll)
         }
     }
 

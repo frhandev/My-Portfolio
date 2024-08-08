@@ -1,0 +1,73 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: solid #fff 2px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 1em;
+    align-items: center;
+}
+
+input {
+    width: 90%;
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+    border-radius: 25px;
+    border: none;
+    background-color: #eeba2c;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus {
+    box-shadow: 0 0 2em #eeba2c76;
+    border: none;
+    outline: none;
+}
+
+input::placeholder {
+    color: #fff;
+}
+
+textarea::placeholder {
+    color: #fff;
+}
+
+input[type="submit"] {
+    width: 30%;
+    margin: 2em 0;
+    border: 2px solid #eeba2c;
+    background-color: #000;
+    color: #eeba2c;
+}
+
+input[type="submit"]:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 2em #eeba2c76;
+    background-color: #eeba2c;
+    color: #fff;
+    cursor: pointer;
+}
+
+textarea {
+    width: 90%;
+    border-radius: 25px;
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+    height: 5em;
+    background-color: #eeba2c;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    border: none;
+}
+
+textarea:focus {
+    box-shadow: 0 0 2em #eeba2c76;
+    border: none;
+    outline: none;
+}
