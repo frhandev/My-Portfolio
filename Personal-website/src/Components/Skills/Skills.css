@@ -1,0 +1,50 @@
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills h2 {
+    font-size: 3em;
+    margin: 2em;
+}
+
+.skillBar {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 60em;
+    gap: 0.5em;
+    margin-bottom: 2em;
+}
+
+.skillBar h3 {
+    font-size: 1.6em;
+}
+
+.barContainer {
+    background-color: #262626;
+    height: 1em;
+    margin: 0;
+    border-radius: 0.5em;
+    width: 100%;
+}
+
+.bar {
+    border-radius: 0.5em;
+    height: 100%;
+    box-shadow: 0 0 2em #eeba2c76;
+    transition: all 0.8s ease-in-out;
+}
+
+@media (max-width: 1000px) {
+    .skillBar {
+        width: 40em;
+    }
+}
+
+@media (max-width: 400px) {
+    .skillBar {
+        width: 25em;
+    }
+}
