@@ -1,53 +1,69 @@
-import React, { useState } from 'react'
-import "./Navbar.css"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faX } from '@fortawesome/free-solid-svg-icons'
+import React, { useState } from "react";
+import "./Navbar.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
-    const [active, setActive] = useState(`navLinks`)
+  const [active, setActive] = useState(`navLinks`);
 
-    const [opacity, setOpacity] = useState(``)
+  const [opacity, setOpacity] = useState(``);
 
-    window.addEventListener('scroll', handleScroll);
+  window.addEventListener("scroll", handleScroll);
 
-    function handleScroll() {
-        if (window.scrollY != 0) {
-            setOpacity(`navActive`);
-        } else {
-            setOpacity(``)
-        }
+  function handleScroll() {
+    if (window.scrollY != 0) {
+      setOpacity(`navActive`);
+    } else {
+      setOpacity(``);
     }
+  }
 
-
-    const handleClick = () => {
-        if (active == "navLinks") {
-            setActive(`navLinks` + ` ` + `active`);
-        } else {
-            setActive(`navLinks`);
-        }
+  const handleClick = () => {
+    if (active == "navLinks") {
+      setActive(`navLinks` + ` ` + `active`);
+    } else {
+      setActive(`navLinks`);
     }
+  };
 
-    return (
-        <header>
-            <nav className={opacity}>
-                <a href=""><h1>Muhammed</h1></a>
+  return (
+    <header>
+      <nav className={opacity}>
+        <a href="">
+          <h1>Muhammed</h1>
+        </a>
 
-                <a onClick={handleClick} className='navToggler'><FontAwesomeIcon icon={faBars} /></a>
+        <a onClick={handleClick} className="navToggler">
+          <FontAwesomeIcon icon={faBars} />
+        </a>
 
-                <div className={active}>
-                    <a onClick={handleClick} className='navToggler'><FontAwesomeIcon icon={faX} /></a>
-                    <a href="#Home" className="navLink">Home</a>
-                    <a href="#About" className="navLink">About</a>
-                    <a href="#Resume" className="navLink">Resume</a>
-                    <a href="#Skills" className="navLink">Skills</a>
-                    <a href="#Portfolio" className="navLink">Portfolio</a>
-                    <a href="#Services" className="navLink">Services</a>
-                    <a href="#Contact" className="navLink">Contact</a>
-                </div>
+        <div className={active}>
+          <a onClick={handleClick} className="navToggler">
+            <FontAwesomeIcon icon={faX} />
+          </a>
+          <a href="#Home" className="navLink">
+            Home
+          </a>
+          <a href="#About" className="navLink">
+            About
+          </a>
+          <a href="#Resume" className="navLink">
+            Resume
+          </a>
+          <a href="#Skills" className="navLink">
+            Skills
+          </a>
+          <a href="#Portfolio" className="navLink">
+            Portfolio
+          </a>
+          {/* <a href="#Services" className="navLink">Services</a> */}
+          <a href="#Contact" className="navLink">
+            Contact
+          </a>
+        </div>
+      </nav>
+    </header>
+  );
+};
 
-            </nav>
-        </header>
-    )
-}
-
-export default Navbar
+export default Navbar;
