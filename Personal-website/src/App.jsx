@@ -16,6 +16,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faCopyright } from "@fortawesome/free-solid-svg-icons";
 import SocialIcons from "./Components/SocialIcons/SocialIcons";
+import Certifications from "./Components/Certifications/Certifications";
 
 function App() {
   const date = new Date();
@@ -27,6 +28,7 @@ function App() {
         <Home />
         {/* <About /> */}
         <Resume />
+        <Certifications />
         <Skills />
         <Portfolio />
         {/* <Services /> */}

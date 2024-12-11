@@ -1,0 +1,41 @@
+.Certifications {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.CertificationsCards {
+    font-size: 2em;
+    margin: 5%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.8em;
+}
+
+.CertificationsCard {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em 0.5em;
+    border-radius: 25px;
+    border: solid #eeba2c 0.2em;
+    color: #eeba2c;
+    transition: all 0.2s ease-in-out;
+}
+
+.CertificationsCard:hover {
+    box-shadow: 0 0 1em #eeba2c76;
+    background-color: #eeba2c;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.CertificationsCard h3 {
+    font-size: 2em;
+    margin-bottom: 0.7em;
+}
