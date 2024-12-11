@@ -44,32 +44,7 @@
     color: #eeba2c;
 }
 
-.socialIcons {
-    width: fit-content;
-    display: flex;
-    gap: 1em;
-    margin-top: 1em;
-}
 
-.socialIconContainer {
-    border-radius: 50%;
-    border: solid #eeba2c 1px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.5em;
-    height: 2.5em;
-    text-decoration: none;
-    color: #eeba2c;
-    transition: all 0.4s ease-in-out;
-}
-
-.socialIconContainer:hover {
-    background-color: #eeba2c;
-    color: #fff;
-    transform: scale(1.1);
-    box-shadow: 0 0 .5em #eeba2c;
-}
 
 @media (max-width: 1000px) {
     .home img {

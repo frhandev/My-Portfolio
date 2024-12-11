@@ -1,13 +1,7 @@
 import React from "react";
 import me from "../../assets/Me.png";
 import "./Home.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faLinkedinIn,
-  faInstagram,
-  faUpwork,
-  faGithub,
-} from "@fortawesome/free-brands-svg-icons";
+import SocialIcons from "../SocialIcons/SocialIcons";
 
 const Home = () => {
   return (
@@ -20,38 +14,7 @@ const Home = () => {
           <span>Front-end</span> developer
         </h2>
       </div>
-
-      <div className="socialIcons">
-        <a
-          href="https://www.linkedin.com/in/muhammed-ferhan-793196252/"
-          className="socialIconContainer"
-          target="_blank"
-        >
-          <p>
-            <FontAwesomeIcon icon={faLinkedinIn} />
-          </p>
-        </a>
-
-        <a
-          href="https://www.instagram.com/mohammad_farhan53/"
-          className="socialIconContainer"
-          target="_blank"
-        >
-          <p>
-            <FontAwesomeIcon icon={faInstagram} />
-          </p>
-        </a>
-
-        <a
-          href="https://github.com/frhandev"
-          className="socialIconContainer"
-          target="_blank"
-        >
-          <p>
-            <FontAwesomeIcon icon={faGithub} />
-          </p>
-        </a>
-      </div>
+      <SocialIcons />
     </section>
   );
 };

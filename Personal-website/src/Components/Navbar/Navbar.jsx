@@ -44,9 +44,9 @@ const Navbar = () => {
           <a href="#Home" className="navLink">
             Home
           </a>
-          <a href="#About" className="navLink">
+          {/* <a href="#About" className="navLink">
             About
-          </a>
+          </a> */}
           <a href="#Resume" className="navLink">
             Resume
           </a>

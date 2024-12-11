@@ -15,6 +15,7 @@ import {
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 import { faCopyright } from "@fortawesome/free-solid-svg-icons";
+import SocialIcons from "./Components/SocialIcons/SocialIcons";
 
 function App() {
   const date = new Date();
@@ -24,7 +25,7 @@ function App() {
       <Navbar />
       <main>
         <Home />
-        <About />
+        {/* <About /> */}
         <Resume />
         <Skills />
         <Portfolio />
@@ -33,37 +34,7 @@ function App() {
       </main>
 
       <footer>
-        <div className="socialIcons">
-          <a
-            href="https://www.linkedin.com/in/muhammed-ferhan-793196252/"
-            className="socialIconContainer"
-            target="_blank"
-          >
-            <p>
-              <FontAwesomeIcon icon={faLinkedinIn} />
-            </p>
-          </a>
-
-          <a
-            href="https://www.instagram.com/mohammad_farhan53/"
-            className="socialIconContainer"
-            target="_blank"
-          >
-            <p>
-              <FontAwesomeIcon icon={faInstagram} />
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/frhandev"
-            className="socialIconContainer"
-            target="_blank"
-          >
-            <p>
-              <FontAwesomeIcon icon={faGithub} />
-            </p>
-          </a>
-        </div>
+        <SocialIcons />
         <p>
           <FontAwesomeIcon icon={faCopyright} /> {date.getFullYear()} Muhammed
           Ferhan - All Rights Reserved
