@@ -1,22 +1,24 @@
-import React from 'react'
-import './Resume.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSchool, faBriefcase } from '@fortawesome/free-solid-svg-icons'
+/* eslint-disable react/prop-types */
+import "./Resume.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSchool } from "@fortawesome/free-solid-svg-icons";
 
 const ResumeCard = ({
-    type = faSchool,
-    company = "Konya Teknik University",
-    title = "Computer engineering",
-    time = "2022-current"
+  type = faSchool,
+  company = "Konya Teknik University",
+  title = "Computer engineering",
+  time = "2022-current",
 }) => {
-    return (
-        <div className="resumeCard">
-            <h3><FontAwesomeIcon icon={type} /></h3>
-            <h4>{company}</h4>
-            <p>{title}</p>
-            <p>{time}</p>
-        </div>
-    )
-}
+  return (
+    <div className="resumeCard">
+      <h3>
+        <FontAwesomeIcon icon={type} />
+      </h3>
+      <h4>{company}</h4>
+      <p>{title}</p>
+      <p>{time}</p>
+    </div>
+  );
+};
 
-export default ResumeCard
+export default ResumeCard;

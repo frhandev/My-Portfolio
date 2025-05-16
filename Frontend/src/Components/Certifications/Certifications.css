@@ -19,6 +19,7 @@
 .CertificationsCard {
     text-decoration: none;
     display: flex;
+    gap: 10px;
     align-items: center;
     flex-direction: column;
     padding: 1em 0.5em;
