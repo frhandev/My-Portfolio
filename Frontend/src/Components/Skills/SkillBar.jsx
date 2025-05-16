@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+/* eslint-disable react/prop-types */
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import bar from "../../assets/eeba2c.png";
 
@@ -9,8 +10,9 @@ const SkillBar = ({ skillName, skillPerc, logo }) => {
 
   function handleScroll() {
     const skillsScrollY =
+      500 +
       document.getElementById("Home").scrollHeight +
-      //   document.getElementById("About").scrollHeight +
+      document.getElementById("Certifications").scrollHeight +
       document.getElementById("Resume").scrollHeight -
       document.getElementById("Skills").scrollHeight;
     if (window.scrollY > skillsScrollY) {
