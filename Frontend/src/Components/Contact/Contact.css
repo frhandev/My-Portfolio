@@ -71,3 +71,26 @@ textarea:focus {
     border: none;
     outline: none;
 }
+
+@media (max-width: 1000px) {
+    form {
+        width: 80%;
+        font-size: 1.3em;
+    }
+
+    input[type="submit"] {
+        height: 2.5em;
+    }
+}
+
+@media (max-width: 400px) {
+    input {
+        height: 2em;
+        border-radius: 1em;
+    }
+
+    textarea {
+        height: 8em;
+        border-radius: 1em;
+    }
+}
