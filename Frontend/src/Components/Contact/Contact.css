@@ -78,17 +78,11 @@ textarea:focus {
         font-size: 1.3em;
     }
 
-    input[type="submit"] {
-        height: 2.5em;
-    }
-}
-
-@media (max-width: 400px) {
     input {
-        height: 2em;
+        height: 2.5em;
         border-radius: 1em;
     }
-
+    
     textarea {
         height: 8em;
         border-radius: 1em;
