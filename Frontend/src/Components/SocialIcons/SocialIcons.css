@@ -11,11 +11,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 2.5em;
-    height: 2.5em;
+    width: 1em;
+    height: 1em;
+    padding: 0.8em;
     text-decoration: none;
     color: #eeba2c;
     transition: all 0.4s ease-in-out;
+    font-size: 1.6em;
 }
 
 .socialIconContainer:hover {

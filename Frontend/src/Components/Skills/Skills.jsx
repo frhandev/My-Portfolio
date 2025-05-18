@@ -30,13 +30,11 @@ const Skills = () => {
       <h2>Skills</h2>
       <div className="skillBarsContainer">
         {skills.map((skill) => (
-          <div>
-            <SkillCard
-              skillName={skill.skillName}
-              logo={skill.logo}
-              skillPerc={skill.skillPerc}
-            />
-          </div>
+          <SkillCard
+            skillName={skill.skillName}
+            logo={skill.logo}
+            skillPerc={skill.skillPerc}
+          />
         ))}
       </div>
     </section>

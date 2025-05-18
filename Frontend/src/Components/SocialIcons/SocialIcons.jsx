@@ -41,6 +41,16 @@ function SocialIcons() {
           <FontAwesomeIcon icon={faGithub} />
         </p>
       </a>
+
+      <a
+        href="https://www.upwork.com/freelancers/~01c14824b86a56ad1a?mp_source=share"
+        className="socialIconContainer"
+        target="_blank"
+      >
+        <p>
+          <FontAwesomeIcon icon={faUpwork} />
+        </p>
+      </a>
     </div>
   );
 }

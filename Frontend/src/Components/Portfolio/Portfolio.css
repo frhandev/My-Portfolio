@@ -17,13 +17,13 @@
     position: relative;
     background-position: center;
     background-size: cover;
-    width: 180px;
-    height: 320px;
+    width: 20em;
+    height: 25em;
     border-radius: 25px;
     border: solid #eeba2c 0.2em;
     margin: 1em;
     color: #fff;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 .projectCard:hover {
@@ -45,17 +45,22 @@
     top: 0;
     width: 101%;
     height: 101%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1));
     opacity: 0;
     border-radius: 25px;
     transition: all 0.3s ease-in-out;
     color: #eeba2c;
+    font-size: 1.3em;
+}
+.content div {
+    width: 80%;
+    padding: 1em;
 }
 
 .content p {
-    font-size: 0.7em;
+    font-size: 1em;
     width: 80%;
-    margin: 0.5em 10%;
+    margin: 1em 10%;
 }
 
 .content a {
@@ -64,7 +69,7 @@
     text-decoration: none;
     width: 50%;
     margin: 10px;
-    padding: 3px;
+    padding: 5px 10px;
     border-radius: 25px;
     transition: all 0.3s ease-in-out;
 }

@@ -29,7 +29,7 @@ function App() {
 
       <footer>
         <SocialIcons />
-        <p>
+        <p className="copyRight">
           <FontAwesomeIcon icon={faCopyright} /> {date.getFullYear()} Muhammed
           Ferhan - All Rights Reserved
         </p>

@@ -3,6 +3,8 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import certificationRoute from "./Routes/certificationRoute.js";
 import skillsRoute from "./Routes/skillsRoute.js";
+import projectRoute from "./Routes/projectRoute.js";
+import meRoute from "./Routes/meRoute.js";
 import cors from "cors";
 
 dotenv.config();
@@ -25,6 +27,8 @@ mongoose
 
 app.use("/certifications", certificationRoute);
 app.use("/skills", skillsRoute);
+app.use("/projects", projectRoute);
+app.use("/me", meRoute);
 
 app.listen(port, () => {
   console.log(`connected on port: ${port}`);
