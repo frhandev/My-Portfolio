@@ -6,31 +6,54 @@
 
 .skillBar {
     display: flex;
-    flex-direction: column;
-    align-items: start;
-    width: 60em;
+    align-items: center;
     gap: 0.5em;
-    margin-bottom: 2em;
+    margin-bottom: 2em; 
+    width: fit-content;
+}
+
+.skillBarsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    width: 60em;
+    flex-wrap: wrap;
 }
 
 .skillBar h3 {
-    font-size: 1.6em;
+    font-size: 1.2em;
 }
 
-.barContainer {
-    background-color: #262626;
-    height: 1em;
+.skillInfoContainer {
+    border-radius: 20%;
+    border: solid #eeba2c .3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    text-decoration: none;
+    color: #eeba2c;
+    width: 7em;
+    height: 7em;
+    padding: 1em;
+    transition: all 0.4s ease-in-out; 
     margin: 0;
-    border-radius: 0.5em;
-    width: 100%;
 }
 
-.bar {
-    border-radius: 0.5em;
-    height: 100%;
-    box-shadow: 0 0 2em #eeba2c76;
-    transition: all 0.8s ease-in-out;
+.skillInfoContainer:hover {
+    background-color: #eeba2c;
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 0 .5em #eeba2c;
 }
+
+.skillInfoContainer img {
+    width: 4em;
+}
+
+
 
 @media (max-width: 1000px) {
     .skillBar {

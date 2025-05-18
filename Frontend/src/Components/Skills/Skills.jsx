@@ -1,42 +1,42 @@
-import React from "react";
-import SkillBar from "./SkillBar";
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/jsx-key */
+import { useEffect, useState } from "react";
+import { BASE_URL } from "../../Constants/baseUrl";
+import SkillCard from "./SkillCard";
 import "./Skills.css";
-import {
-  faHtml5,
-  faCss3,
-  faJs,
-  faReact,
-  faGithub,
-  faFigma,
-} from "@fortawesome/free-brands-svg-icons";
-import { faCode, faSearch } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Skills = () => {
-  const skills = [
-    { skillName: "HTML", logo: faHtml5, skillPerc: "100%" },
-    { skillName: "CSS", logo: faCss3, skillPerc: "100%" },
-    { skillName: "Javascript", logo: faJs, skillPerc: "100%" },
-    { skillName: "React", logo: faReact, skillPerc: "90%" },
-    { skillName: "Problem Solving", logo: faCode, skillPerc: "80%" },
-    {
-      skillName: "Git/Github Version Control",
-      logo: faGithub,
-      skillPerc: "80%",
-    },
-    { skillName: "UI/UX", logo: faFigma, skillPerc: "60%" },
-    { skillName: "SEO", logo: faSearch, skillPerc: "80%" },
-  ];
+  const [skills, setSkills] = useState([]);
+  const [err, setErr] = useState(false);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch(`${BASE_URL}/skills`);
+        const data = await res.json();
+        setSkills(data);
+        console.log(data);
+      } catch {
+        setErr(true);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <section id="Skills" className="skills">
       <h2>Skills</h2>
       <div className="skillBarsContainer">
         {skills.map((skill) => (
-          <SkillBar
-            skillName={skill.skillName}
-            logo={skill.logo}
-            skillPerc={skill.skillPerc}
-          />
+          <div>
+            <SkillCard
+              skillName={skill.skillName}
+              logo={skill.logo}
+              skillPerc={skill.skillPerc}
+            />
+          </div>
         ))}
       </div>
     </section>
