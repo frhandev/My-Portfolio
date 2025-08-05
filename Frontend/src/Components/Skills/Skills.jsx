@@ -116,8 +116,9 @@ const Skills = () => {
         </a>
       </div>
       <div className="skillBarsContainer">
-        {filteredSkills.map((skill) => (
+        {filteredSkills.map((skill, index) => (
           <SkillCard
+            key={index}
             skillName={skill.skillName}
             logo={skill.logo}
             skillPerc={skill.skillPerc}

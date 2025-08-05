@@ -1,4 +1,3 @@
-import React from "react";
 import "./Resume.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -6,7 +5,6 @@ import {
   faBriefcase,
   faCertificate,
 } from "@fortawesome/free-solid-svg-icons";
-import ResumeCard from "./ResumeCard";
 
 const Resume = () => {
   const certification = [

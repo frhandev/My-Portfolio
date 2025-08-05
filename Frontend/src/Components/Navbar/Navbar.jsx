@@ -22,7 +22,7 @@ const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
   const handleClick = () => {
     if (active == "navLinks") {
-      setActive(`navLinks` + ` ` + `active`);
+      setActive(`navLinks` + ` ` + `activeNav`);
       setIsActive(true);
     } else {
       setActive(`navLinks`);
