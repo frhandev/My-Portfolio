@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 import "./Skills.css";
 
-const SkillCard = ({ skillName, skillPerc, logo }) => {
+const SkillCard = ({ skillName, logo }) => {
   return (
     <div className="skillInfoContainer">
       <img src={logo} />

@@ -56,9 +56,6 @@ const Navbar = () => {
           <a href="#Resume" className="navLink">
             Resume
           </a>
-          <a href="#Certifications" className="navLink">
-            Certifications
-          </a>
           <a href="#Skills" className="navLink">
             Skills
           </a>

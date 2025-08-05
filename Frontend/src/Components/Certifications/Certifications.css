@@ -26,7 +26,9 @@
     border-radius: 25px;
     border: solid #eeba2c 0.2em;
     color: #eeba2c;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    width: 30%;
+    text-align: center;
 }
 
 .CertificationsCard:hover {
@@ -40,3 +42,10 @@
     font-size: 2em;
     margin-bottom: 0.7em;
 }
+
+
+@media screen and (max-width: 600px) {
+    .CertificationsCard {
+      width: 60%;
+    }
+  }

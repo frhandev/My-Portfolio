@@ -17,7 +17,6 @@ const Certifications = () => {
         const res = await fetch(`${BASE_URL}/certifications`);
         const data = await res.json();
         setCertifications(data);
-        console.log(data);
       } catch {
         setErr(true);
       }
@@ -26,12 +25,28 @@ const Certifications = () => {
     fetchData();
   }, []);
 
-  return (
+  return Certifications && !err ? (
     <section className="Certifications" id="Certifications">
       <h2>Certifications</h2>
       <div className="CertificationsCards">
-        {certifications.map((cert) => (
+        {certifications.map((cert, index) => (
           <CertificationsCard
+            key={index}
+            name={cert.Name}
+            company={cert.company}
+            url={cert.URL}
+            date={cert.Date}
+          />
+        ))}
+      </div>
+    </section>
+  ) : (
+    <section className="Certifications" id="Certifications">
+      <h2>Certifications</h2>
+      <div className="CertificationsCards">
+        {defaultValeus.map((cert, index) => (
+          <CertificationsCard
+            key={index}
             name={cert.Name}
             company={cert.company}
             url={cert.URL}

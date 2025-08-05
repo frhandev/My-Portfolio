@@ -1,40 +1,78 @@
 .resume {
     display: flex;
+    justify-content: center ;
     flex-direction: column;
     align-items: center;
-    margin-top: 2em;
 }
 
-.resumeCards {
-    font-size: 2em;
-    margin: 5%;
+.resumeCardContainer {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 3em;
     width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1.8em;
 }
 
-.resumeCard {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 1em 0.5em;
+.certs {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+
+.resumeContainer {
+    border: solid #eeba2c .3em;
     border-radius: 25px;
-    border: solid #eeba2c 0.2em;
+    padding: 2em;
+    display: flex; 
+    gap: 1em;
+    align-items: center;
+}
+
+.line {
+    border: solid #eeba2c .1em;
+    height: 90%;
+}
+
+.resumeContentContainer {
+    display: flex; 
+    flex-direction: column;
+    gap: 0.8em;
+    justify-content: start;
+    height: 100%;
+}
+
+.resumeContentContainer div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.resumeContentContainer a{
+    text-decoration: none;
+}
+
+.resumeContentContainer h3 {
+    font-size: 1.5em;
+    color: aliceblue;
+    transition: all 0.4s ease-in-out;
+}
+
+.resumeContentContainer h3:hover {
     color: #eeba2c;
-    transition: all 0.2s ease-in-out;
+    text-shadow: 0 0 .5em #eeba2c;
 }
 
-.resumeCard:hover {
-    box-shadow: 0 0 1em #eeba2c76;
-    background-color: #eeba2c;
-    color: #fff;
-    transform: scale(1.05);
+.resumeContentContainer .title {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
 }
 
-.resumeCard h3 {
-    font-size: 2em;
-    margin-bottom: 0.7em;
+@media screen and (max-width:500px) {
+    .resumeCardContainer {
+        grid-template-columns: auto;
+    }
+    .certs {
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
 }
